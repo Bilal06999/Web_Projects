@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/index-Dghla-T6.css">
+    <script type="module" src="./assets/index-RoxQZu6f.js" defer></script>
+    <title>My-Porfolio</title>
+</head>
+
+<body class="bg-background text-text transition-all duration-1000 ease-in-out">
+    <!-- Header -->
+    <header class="container relative bg-background">
+        <!-- navbar -->
+        <nav class="flex justify-between place-items-center h-16">
+            <!-- nav-logo -->
+            <a class="flex font-medium items-center text-white" href="/">
+                <span class="ml-3 text-2xl">Portfolio</span>
+            </a>
+            <!-- nav menu -->
+            <ul
+                class="nav-menu flex flex-col gap-5 py-20 absolute w-full h-fit left-0 top-0 -translate-y-full text-center text-white bg-secondary transition-transform ease-in-out-out delay-300 z-10 lg:static lg:-translate-y-0 lg:flex-row lg:p-0 lg:w-fit lg:bg-transparent text-xl">
+                <li><a class="p-2 hover:text-primary transition ease-in delay-100"
+                        href="index.html#services">Services</a></li>
+                <li><a class="p-2 hover:text-primary transition ease-in delay-100" href="index.html#about">About</a>
+                </li>
+                <li><a class="p-2 hover:text-primary transition ease-in delay-100"
+                        href="#project-section">Projects</a></li>
+                <li><a class="p-2 hover:text-primary transition ease-in delay-100"
+                        href="index.html#testimonial">Testimonial</a></li>
+                <li><a class="p-2 hover:text-primary transition ease-in delay-100" href="#contact">Contact</a></li>
+            </ul>
+            <!-- hamburger -->
+            <div class="nav-icons text-xl px-2 text-white lg:hidden z-10">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-x hidden"></i>
+            </div>
+        </nav>
+    </header>
+    <section class="container py-8 project-section">
+        <h2 class="text-4xl lg:text-5xl font-bold text-primary mb-2">Projects</h2>
+        <p class="text-sm lg:text-xl text-text mb-8 sm:m-0">see my lastest work</p>
+        <div class="projects-all grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 py-4">
+        </div>
+    </section>
+    <!-- contact form -->
+    <section id="contact" class="container py-8">
+        <div class="flex flex-col md:flex-row justify-between">
+            <div class="mb-4">
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-8">Let's discuss your project</h2>
+                <ul class="space-y-2">
+                    <li class="flex items-center space-x-2">
+                        <i class="fa-solid fa-envelope text-xl"></i>
+                        <span class="text-xl">bilalcurrenter@gmail.com</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <i class="fa-solid fa-phone text-xl"></i>
+                        <span class="text-xl">Lahore - Farooqabad</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <i class="fa-solid fa-globe text-xl"></i>
+                        <span class="text-xl">bilalbhai.xyz</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="">
+                <h3 class="text-xl lg:text-2xl font-medium text-white mb-4">I'm always open to discussing product design
+                    work or
+                    partnerships.</h3>
+                <form id="myForm" action="https://formsubmit.co/8f85737b5c8b74f3f1e0c850b570ffa1" method="POST"
+                    class="submit-form space-y-4">
+                    <div class="space-y-2">
+                        <label for="name" class="block text-sm lg:text-lg">Name *</label>
+                        <input type="text" id="name" name="name"
+                            class="w-full p-2 bg-transparent text-xl text-white border-b-2 border-text focus:outline-none tracking-wide"
+                            autocomplete="on">
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-2">
+                        <div class="w-full md:w-1/2">
+                            <label for="email" class="block text-sm lg:text-lg">Email *</label>
+                            <input type="email" id="email" name="email" autocomplete="off"
+                                class="w-full p-2 bg-transparent text-xl text-white border-b-2 border-text focus:outline-none tracking-wide"
+                                autocomplete="on">
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <label for="subject" class="block text-sm lg:text-lg">Subject *</label>
+                            <input type="text" id="subject" name="subject"
+                                class="w-full p-2 bg-transparent text-xl text-white border-b-2 border-text focus:outline-none"
+                                autocomplete="on">
+                        </div>
+                    </div>
+                    <div class="">
+                        <label for="msg" class="block text-sm lg:text-lg">Message *</label>
+                        <textarea name="msg" id="msg"
+                            class="w-full p-2 bg-transparent text-xl text-white border-b-2 border-text focus:outline-none tracking-wide"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="bg-primary text-xl text-white py-2 px-4 rounded w-full sm:w-1/2 md:mx-0 md:w-1/3 mx-auto block focus:outline-none hover:scale-105 transition-scale duration-300 ease-in-out outline-none">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="container py-8 text-center bg-secondary">
+        <p>&copy; Copyrigth-2024 Designed with love by Bilal.</p>
+    </footer>
+</body>
+
+</html>
