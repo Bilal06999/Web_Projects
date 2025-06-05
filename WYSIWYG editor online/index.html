@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WYSIWYG Editor + HTML output</title>
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light">
+
+  <div class="editor-container">
+    <div class="editor-navbar">
+      <div class="undo-redo-print">
+        <button id="undo-button" title="Undo">⤺</button>
+        <button id="redo-button" title="Redo">⤻</button>
+        <button id="print-button" title="Print">🖨️</button>
+      </div>
+      <div class="button-area">
+        <button id="toggle-theme">Theme</button>
+        <button id="show-output">HTML</button>
+        <button onclick="clearEditor()">Clear</button>
+      </div>
+    </div>
+    <div class="editor-body">
+      <div class="left-block">
+        <div id="toolbar">
+          <span class="ql-formats">
+            <select class="ql-font"></select>
+            <select class="ql-size"></select>
+          </span>
+          <span class="ql-formats">
+            <button class="ql-bold"></button>
+            <button class="ql-italic"></button>
+            <button class="ql-underline"></button>
+            <button class="ql-strike"></button>
+          </span>
+          <span class="ql-formats">
+            <button class="ql-script" value="sub"></button>
+            <button class="ql-script" value="super"></button>
+            <select class="ql-color"></select>
+            <select class="ql-background"></select>
+          </span>
+          <span class="ql-formats">
+            <button class="ql-list" value="ordered"></button>
+            <button class="ql-list" value="bullet"></button>
+            <button class="ql-indent" value="-1"></button>
+            <button class="ql-indent" value="+1"></button>
+          </span>
+          <span class="ql-formats">
+            <button class="ql-align" value=""></button>
+            <button class="ql-align" value="center"></button>
+            <button class="ql-align" value="right"></button>
+            <button class="ql-align" value="justify"></button>
+          </span>
+          <span class="ql-formats">
+            <button class="ql-clean"></button>
+            <button class="ql-link"></button>
+            <button class="ql-image"></button>
+            <button class="ql-video"></button>
+          </span>
+        </div>
+        <div id="editor">
+          <p>Type something here...</p>
+        </div>
+      </div>
+      <div class="right-block">
+        <h3 class="output-html-heading light">Output HTML</h3>
+        <div id="output-container">
+          <div class="code-header"></div>
+          <div class="code-wrapper">
+            <div class="line-numbers" id="line-numbers"></div>
+            <pre><code id="output-html"></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
