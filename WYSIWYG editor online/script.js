@@ -16,29 +16,32 @@ document.getElementById('toggle-theme').addEventListener('click', () => {
 });
 
 document.getElementById('show-output').addEventListener('click', () => {
-  let html = quill.root.innerHTML;
-
   const OutputBlock = document.querySelector(".right-block");
   OutputBlock.classList.toggle("hide");
+  updateHTML();
+});
+quill.on('text-change', () => {
+updateHTML();
+});
+
+function updateHTML() {
+  let html = quill.root.innerHTML;
+
   html = html.replace(/<p><br><\/p>/g, '<br>');
   html = html.replace(/(<\/p>)/g, '$1\n')
     .replace(/<br>/g, '<br>\n');
   html = html.trim();
+
   const codeBlock = document.getElementById('output-html');
   codeBlock.textContent = html;
+
   const lines = html.split('\n');
   const numberBlock = document.getElementById('line-numbers');
   numberBlock.innerHTML = '';
   for (let i = 1; i <= lines.length; i++) {
     numberBlock.innerHTML += i + '<br>';
   }
-});
-
-
-
-
-
-
+}
 
 function clearEditor() {
   quill.setText('');
